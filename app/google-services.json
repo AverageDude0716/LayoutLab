@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "148069740144",
+    "project_id": "layoutlab-af89f",
+    "storage_bucket": "layoutlab-af89f.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:148069740144:android:9032b393d5314266538eb5",
+        "android_client_info": {
+          "package_name": "com.example.layoutlab"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDTn0WloJxN0vLE_gvvBaJu2aPjbZ7eZAA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

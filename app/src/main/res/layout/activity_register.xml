@@ -8,6 +8,18 @@
     tools:context=".Register">
 
 
+    <Button
+        android:id="@+id/btn_goToLogin"
+        android:layout_width="152dp"
+        android:layout_height="51dp"
+        android:text="Go to Login"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btn_register"
+        app:layout_constraintVertical_bias="0.05" />
+
     <EditText
         android:id="@+id/txt_usernameRegister"
         android:layout_width="200dp"
@@ -47,11 +59,10 @@
         android:id="@+id/btn_register"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Login"
+        android:text="Register"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/txt_passwordRegister"
-        app:layout_constraintVertical_bias="0.076" />
+        app:layout_constraintVertical_bias="0.064" />
 </androidx.constraintlayout.widget.ConstraintLayout>
