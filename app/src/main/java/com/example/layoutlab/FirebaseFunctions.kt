@@ -39,11 +39,10 @@ class FirebaseFunctions {
             }
     }
 
-    // save data
-    suspend fun saveData(collection: String, documentId: String, data: Map<String, Any>): Boolean {
+    // save User data
+    suspend fun saveUserData(collection: String, data: Map<String, Any>): Boolean {
         return suspendCoroutine { continuation ->
-            firestore.collection(collection).document(documentId)
-                .set(data)
+            firestore.collection(collection).add(data)
                 .addOnSuccessListener {
                     continuation.resume(true)
                 }
