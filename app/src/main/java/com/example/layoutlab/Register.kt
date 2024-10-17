@@ -83,23 +83,25 @@ class Register : AppCompatActivity() {
         FirebaseFunc.registerUser(email, password) { success, message ->
             if (success) {
                 Toast.makeText(this, "Registration Successful", Toast.LENGTH_SHORT).show()
+
+                lifecycleScope.launch {
+                    val saved = FirebaseFunc.saveUserData("User", user)
+                    if(saved){
+                        Toast.makeText(this@Register, "Data Saved Successfully", Toast.LENGTH_SHORT).show()
+
+                        val intent = Intent(this@Register, Home::class.java)
+                        startActivity(intent)
+                        finish()
+                    }else {
+                        Toast.makeText(this@Register, "Failed to Save Data", Toast.LENGTH_SHORT).show()
+                    }
+
+                }
+
             } else {
                 Toast.makeText(this, "Registration Failed: $message", Toast.LENGTH_SHORT).show()
             }
         }
 
-        lifecycleScope.launch {
-            val saved = FirebaseFunc.saveUserData("User", user)
-            if(saved){
-                Toast.makeText(this@Register, "Data Saved Successfully", Toast.LENGTH_SHORT).show()
-            }else {
-                Toast.makeText(this@Register, "Failed to Save Data", Toast.LENGTH_SHORT).show()
-            }
-
-        }
-
-        val intent = Intent(this@Register, Home::class.java)
-        startActivity(intent)
-        finish()
     }
 }

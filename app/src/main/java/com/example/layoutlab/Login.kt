@@ -58,14 +58,14 @@ class Login : AppCompatActivity() {
         FirebaseFunc.loginUser(email, password){ success, message ->
             if (success) {
                 Toast.makeText(this, "Login Successful", Toast.LENGTH_SHORT).show()
+
+                val intent = Intent(this@Login, Home::class.java)
+                startActivity(intent)
+                finish()
             } else {
                 Toast.makeText(this, "Login Failed: $message", Toast.LENGTH_SHORT).show()
             }
         }
-
-        val intent = Intent(this@Login, Home::class.java)
-        startActivity(intent)
-        finish()
 
     }
 }
