@@ -24,6 +24,7 @@ class Register : AppCompatActivity() {
     lateinit var etx_email: EditText
     lateinit var etx_password: EditText
     lateinit var btn_register: Button
+    lateinit var etx_confirmPassword: EditText
     lateinit var txt_goToLogin: TextView
 
 
@@ -42,6 +43,7 @@ class Register : AppCompatActivity() {
         etx_password = findViewById(R.id.etx_passwordRegister)
         btn_register = findViewById(R.id.btn_register)
         txt_goToLogin = findViewById(R.id.txt_gotToLogin)
+        etx_confirmPassword = findViewById(R.id.etx_confirmPasswordRegister)
 
         btn_register.setOnClickListener{
             register()
@@ -61,9 +63,15 @@ class Register : AppCompatActivity() {
         val username = etx_username.text.toString()
         val email = etx_email.text.toString()
         val password = etx_password.text.toString()
+        val confirmPassword = etx_confirmPassword.text.toString()
 
         if (email.isBlank() || password.isBlank() || username.isBlank()) {
             Toast.makeText(this, "Username, Email and Password can't be blank", Toast.LENGTH_SHORT).show()
+            return
+        }
+
+        if (password == confirmPassword) {
+            Toast.makeText(this, "Password doesn't match", Toast.LENGTH_SHORT).show()
             return
         }
 

@@ -11,26 +11,59 @@
     <EditText
         android:id="@+id/etx_usernameRegister"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="40dp"
         android:layout_margin="10dp"
         android:hint="Username"
+        android:textSize="20sp"
+        android:textColorHint="@color/white"
+        android:paddingStart="20dp"
+        android:paddingEnd="20sp"
+        android:padding="5dp"
+        android:background="@drawable/rounded_corner_grey"
         android:inputType="text"/>
 
     <EditText
         android:id="@+id/etx_emailRegister"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="40dp"
         android:layout_margin="10dp"
         android:hint="Email"
-        android:inputType="textEmailAddress" />
+        android:textSize="20sp"
+        android:inputType="textEmailAddress"
+        android:background="@drawable/rounded_corner_grey"
+        android:textColorHint="@color/white"
+        android:padding="5dp"
+        android:paddingStart="20dp"
+        android:paddingEnd="20sp"/>
 
     <EditText
         android:id="@+id/etx_passwordRegister"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="40dp"
         android:layout_margin="10dp"
+        android:textSize="20sp"
         android:hint="Password"
-        android:inputType="textPassword"/>
+        android:inputType="textPassword"
+        android:background="@drawable/rounded_corner_grey"
+        android:textColorHint="@color/white"
+        android:padding="5dp"
+        android:paddingStart="20dp"
+        android:paddingEnd="20sp"/>
+
+    <EditText
+        android:id="@+id/etx_confirmPasswordRegister"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_margin="10dp"
+        android:textSize="20sp"
+        android:hint="Confirm Password"
+        android:inputType="textPassword"
+        android:background="@drawable/rounded_corner_grey"
+        android:textColorHint="@color/white"
+        android:padding="5dp"
+        android:paddingStart="20dp"
+        android:paddingEnd="20sp"/>
+
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -49,7 +82,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textSize="12sp"
-            android:text="Already have an accout? Login"
+            android:text="Already have an account? Login"
             android:id="@+id/txt_gotToLogin"/>
 
     </LinearLayout>
