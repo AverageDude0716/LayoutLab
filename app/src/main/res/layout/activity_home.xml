@@ -5,20 +5,23 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Home"
-    android:orientation="vertical">
+    android:background="@color/white"
+    android:orientation="vertical"
+    tools:context=".Home">
 
     <!-- top-->
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:padding="3dp"
-        android:orientation="horizontal">
+        android:orientation="horizontal"
+        android:padding="5dp">
 
         <Button
             android:id="@+id/btn_settingsHome"
             android:layout_width="50dp"
-            android:layout_height="50dp" />
+            android:layout_height="50dp"
+            android:backgroundTint="@android:color/transparent"
+            android:foreground="@drawable/setting" />
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/btn_logoHome"
@@ -30,10 +33,11 @@
             app:backgroundTint="@android:color/transparent" />
 
         <Button
+            android:id="@+id/btn_profileHome"
             android:layout_width="50dp"
             android:layout_height="50dp"
-            android:id="@+id/btn_profileHome"
-            android:text="s"/>
+            android:backgroundTint="@android:color/transparent"
+            android:foreground="@drawable/profile" />
 
     </LinearLayout>
 
