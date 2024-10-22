@@ -51,4 +51,21 @@ class FirebaseFunctions {
                 }
         }
     }
+
+    //get data
+    fun getUserData(){
+
+        val currentUser = FirebaseAuth.getInstance().currentUser
+
+        if(currentUser != null){
+
+            val uid = currentUser.uid
+
+            val db = FirebaseFirestore.getInstance()
+
+            
+
+        }
+
+    }
 }

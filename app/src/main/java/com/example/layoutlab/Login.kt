@@ -30,8 +30,6 @@ class Login : AppCompatActivity() {
         enableEdgeToEdge()
         setContentView(R.layout.activity_login)
 
-
-
         etx_email = findViewById(R.id.etx_emailLogin)
         etx_password = findViewById(R.id.etx_passwordLogin)
         btn_login = findViewById(R.id.btn_login)
