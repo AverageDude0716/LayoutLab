@@ -16,28 +16,54 @@
         android:orientation="horizontal"
         android:padding="5dp">
 
-        <Button
-            android:id="@+id/btn_settingsHome"
-            android:layout_width="50dp"
+        <LinearLayout
+            android:layout_width="0dp"
             android:layout_height="50dp"
-            android:backgroundTint="@android:color/transparent"
-            android:foreground="@drawable/setting" />
+            android:layout_weight="1"
+            android:orientation="horizontal"
+            android:gravity="start">
 
-        <com.google.android.material.button.MaterialButton
-            android:id="@+id/btn_logoHome"
-            android:layout_width="50dp"
-            android:layout_height="50dp"
-            android:layout_marginLeft="125dp"
-            android:layout_marginRight="125dp"
-            android:foreground="@drawable/logo_transparent"
-            app:backgroundTint="@android:color/transparent" />
+            <Button
+                android:id="@+id/btn_settingsHome"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:backgroundTint="@android:color/transparent"
+                android:foreground="@drawable/settings_icon" />
 
-        <Button
-            android:id="@+id/btn_profileHome"
-            android:layout_width="50dp"
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
             android:layout_height="50dp"
-            android:backgroundTint="@android:color/transparent"
-            android:foreground="@drawable/profile" />
+            android:layout_weight="1"
+            android:orientation="horizontal"
+            android:gravity="center">
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btn_logoHome"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:foreground="@drawable/logo_transparent"
+                app:backgroundTint="@android:color/transparent"
+                android:clickable="false"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_weight="1"
+            android:orientation="horizontal"
+            android:gravity="end">
+
+            <Button
+                android:id="@+id/btn_profileHome"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:backgroundTint="@android:color/transparent"
+                android:foreground="@drawable/profile_icon" />
+
+        </LinearLayout>
 
     </LinearLayout>
 
@@ -50,23 +76,45 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:paddingStart="19dp"
+            android:paddingEnd="19dp"
             android:text="Hi there!"
-            android:textSize="20sp" />
+            android:textSize="30sp" />
 
     </LinearLayout>
 
     <!--search-->
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:gravity="center">
 
-        <TextView
-            android:layout_width="200dp"
-            android:layout_height="40dp"
-            android:paddingStart="15dp"
-            android:paddingLeft="10dp"
-            android:paddingTop="10dp"
-            android:text="Search" />
+        <LinearLayout
+            android:layout_width="275dp"
+            android:layout_height="50dp"
+            android:orientation="horizontal"
+            android:padding="5dp"
+            android:background="@drawable/search">
+
+            <ImageView
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:background="@drawable/search_icon"/>
+
+
+            <EditText
+                android:id="@+id/etx_search"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="@android:color/transparent"
+                android:hint="@string/search"
+                android:inputType="text"
+                android:padding="3dp"
+                android:paddingStart="5dp"
+                android:paddingEnd="5sp"
+                android:textColorHint="@color/black"
+                android:textSize="20sp" />
+
+        </LinearLayout>
 
     </LinearLayout>
 
@@ -78,36 +126,117 @@
     </LinearLayout>
 
     <!-- scroll view-->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:clipToPadding="false"
+        android:paddingTop="5dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:paddingLeft="40dp"
+            android:paddingRight="40dp">
+
+
+            <!--saved design-->
+            <LinearLayout
+                android:id="@+id/lin_savedDesigns"
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:orientation="vertical"
+                android:layout_marginTop="15dp"
+                android:layout_marginBottom="15dp"
+                android:padding="5dp"
+                android:background="@drawable/scrollview_items">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Saved Designs"
+                    android:textSize="25sp"
+                    android:textColor="@color/white"
+                    android:padding="5dp"/>
+
+            </LinearLayout>
+
+            <!--drafts-->
+            <LinearLayout
+                android:id="@+id/lin_drafts"
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:orientation="vertical"
+                android:layout_marginTop="15dp"
+                android:layout_marginBottom="15dp"
+                android:background="@drawable/scrollview_items">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Drafts"
+                    android:textSize="25sp"
+                    android:textColor="@color/white"
+                    android:padding="5dp"/>
+
+            </LinearLayout>
+
+            <!--library-->
+            <LinearLayout
+                android:id="@+id/lin_library"
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:orientation="vertical"
+                android:layout_marginTop="15dp"
+                android:layout_marginBottom="15dp"
+                android:background="@drawable/scrollview_items">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Library"
+                    android:textSize="25sp"
+                    android:textColor="@color/white"
+                    android:padding="5dp"/>
+
+            </LinearLayout>
+
+            <!--explore-->
+            <LinearLayout
+                android:id="@+id/lin_explore"
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:orientation="vertical"
+                android:layout_marginTop="15dp"
+                android:layout_marginBottom="15dp"
+                android:background="@drawable/scrollview_items">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Explore"
+                    android:textSize="25sp"
+                    android:textColor="@color/white"
+                    android:padding="5dp"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+    <!--add button-->
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
-    </LinearLayout>
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:layout_width="50dp"
+            android:layout_height="50dp"/>
 
-    <Button
-        android:id="@+id/btn_save"
-        android:layout_width="373dp"
-        android:layout_height="180dp"
-        android:background="@drawable/rounded_corner_black"
-        android:text="Saved Designs" />
-    <Button
-        android:id="@+id/btn_drafts"
-        android:layout_width="373dp"
-        android:layout_height="180dp"
-        android:background="@drawable/rounded_corner_black"
-        android:text="Drafts" />
-    <Button
-        android:id="@+id/btn_library"
-        android:layout_width="373dp"
-        android:layout_height="180dp"
-        android:background="@drawable/rounded_corner_black"
-        android:text="Library" />
-    <Button
-        android:id="@+id/btn_explore"
-        android:layout_width="373dp"
-        android:layout_height="180dp"
-        android:background="@drawable/rounded_corner_black"
-        android:text="Explore" />
+    </LinearLayout>
 
 
 </LinearLayout>
