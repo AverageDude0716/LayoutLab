@@ -4,7 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Home">
+    tools:context=".Home"
+    android:background="@color/white">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -131,7 +132,7 @@
 
 
                         <EditText
-                            android:id="@+id/etx_search"
+                            android:id="@+id/etx_searchHome"
                             android:layout_width="match_parent"
                             android:layout_height="50dp"
                             android:background="@android:color/transparent"
