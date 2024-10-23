@@ -37,7 +37,7 @@ class Home : AppCompatActivity() {
         btn_settingsHome.setOnClickListener {
             val intent = Intent(this@Home, settings::class.java)
             startActivity(intent)
-
+            finish()
         }
 
         btn_profileHome.setOnClickListener{
