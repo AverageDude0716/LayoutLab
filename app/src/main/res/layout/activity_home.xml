@@ -260,7 +260,6 @@
         android:layout_height="wrap_content"
         android:layout_gravity="end|bottom"
         android:layout_margin="35dp"
-        android:background="@android:color/transparent"
         android:backgroundTint="@color/white"
         android:src="@drawable/add_icon" />
     
