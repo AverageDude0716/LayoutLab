@@ -70,11 +70,11 @@ class Home : AppCompatActivity() {
             finish()
         }
 
-        fab_addHome.setOnClickListener {
-            val intent = Intent(this@Home, agumentedReality::class.java)
-            startActivity(intent)
-            finish()
-        }
+//        fab_addHome.setOnClickListener {
+//            val intent = Intent(this@Home, agumentedReality::class.java)
+//            startActivity(intent)
+//            finish()
+//        }
 
 //        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
 //            val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
