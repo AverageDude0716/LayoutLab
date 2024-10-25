@@ -64,13 +64,12 @@ class Register : AppCompatActivity() {
         val email = etx_email.text.toString()
         val password = etx_password.text.toString()
         val confirmPassword = etx_confirmPassword.text.toString()
-
         if (email.isBlank() || password.isBlank() || username.isBlank()) {
             Toast.makeText(this, "Username, Email and Password can't be blank", Toast.LENGTH_SHORT).show()
             return
         }
 
-        if (password == confirmPassword) {
+        if (password != confirmPassword) {
             Toast.makeText(this, "Password doesn't match", Toast.LENGTH_SHORT).show()
             return
         }

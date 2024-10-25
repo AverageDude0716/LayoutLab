@@ -101,6 +101,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:textAlignment="center"
+                        android:textColor="@color/black"
                         android:text="Saved Designs"
                         android:textSize="25sp"
                         android:textStyle="bold"/>
@@ -156,20 +157,31 @@
                     <LinearLayout
                         android:id="@+id/lin_item1Explore"
                         android:layout_width="match_parent"
-                        android:layout_height="150dp"
-                        android:orientation="vertical"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
                         android:layout_marginTop="15dp"
                         android:layout_marginBottom="15dp"
                         android:padding="5dp"
                         android:background="@drawable/scrollview_items">
 
-                        <TextView
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="150dp"
+                            android:layout_weight="1"
+                            android:orientation="vertical"
+                            android:layout_margin="10dp"
+                            android:padding="2dp"
+                            android:background="@drawable/scrollview_items">
 
-                            android:textSize="25sp"
-                            android:textColor="@color/white"
-                            android:padding="5dp"/>
+                            <ImageView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:src="@drawable/design_1"
+                                android:clipToOutline="true"
+                                android:background="@drawable/library_item"
+                                android:scaleType="fitXY"/>
+
+                        </LinearLayout>
 
                     </LinearLayout>
 
@@ -177,59 +189,81 @@
                     <LinearLayout
                         android:id="@+id/lin_item2Explore"
                         android:layout_width="match_parent"
-                        android:layout_height="150dp"
-                        android:orientation="vertical"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
                         android:layout_marginTop="15dp"
                         android:layout_marginBottom="15dp"
                         android:background="@drawable/scrollview_items">
 
-                        <TextView
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="150dp"
+                            android:layout_weight="1"
+                            android:orientation="vertical"
+                            android:layout_margin="10dp"
+                            android:padding="2dp"
+                            android:background="@drawable/scrollview_items">
 
-                            android:textSize="25sp"
-                            android:textColor="@color/white"
-                            android:padding="5dp"/>
+                            <ImageView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:src="@drawable/design_2"
+                                android:clipToOutline="true"
+                                android:background="@drawable/library_item"
+                                android:scaleType="fitXY"/>
 
-                    </LinearLayout>
-
-                    <!--library-->
-                    <LinearLayout
-                        android:id="@+id/lin_item3Explore"
-                        android:layout_width="match_parent"
-                        android:layout_height="150dp"
-                        android:orientation="vertical"
-                        android:layout_marginTop="15dp"
-                        android:layout_marginBottom="15dp"
-                        android:background="@drawable/scrollview_items">
-
-                        <TextView
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-
-                            android:textSize="25sp"
-                            android:textColor="@color/white"
-                            android:padding="5dp"/>
+                        </LinearLayout>
 
                     </LinearLayout>
+
+<!--                    &lt;!&ndash;library&ndash;&gt;-->
+<!--                    <LinearLayout-->
+<!--                        android:id="@+id/lin_item3Explore"-->
+<!--                        android:layout_width="match_parent"-->
+<!--                        android:layout_height="150dp"-->
+<!--                        android:orientation="vertical"-->
+<!--                        android:layout_marginTop="15dp"-->
+<!--                        android:layout_marginBottom="15dp"-->
+<!--                        android:background="@drawable/scrollview_items">-->
+
+<!--                        <TextView-->
+<!--                            android:layout_width="match_parent"-->
+<!--                            android:layout_height="wrap_content"-->
+
+<!--                            android:textSize="25sp"-->
+<!--                            android:textColor="@color/white"-->
+<!--                            android:padding="5dp"/>-->
+
+<!--                    </LinearLayout>-->
 
                     <!--explore-->
                     <LinearLayout
                         android:id="@+id/lin_item4Explore"
                         android:layout_width="match_parent"
-                        android:layout_height="150dp"
-                        android:orientation="vertical"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
                         android:layout_marginTop="15dp"
                         android:layout_marginBottom="15dp"
                         android:background="@drawable/scrollview_items">
 
-                        <TextView
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="150dp"
+                            android:layout_weight="1"
+                            android:orientation="vertical"
+                            android:layout_margin="10dp"
+                            android:padding="2dp"
+                            android:background="@drawable/scrollview_items">
 
-                            android:textSize="25sp"
-                            android:textColor="@color/white"
-                            android:padding="5dp"/>
+                            <ImageView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:src="@drawable/design_3"
+                                android:clipToOutline="true"
+                                android:background="@drawable/library_item"
+                                android:scaleType="fitXY"/>
+
+                        </LinearLayout>
 
                     </LinearLayout>
 

@@ -101,6 +101,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:textAlignment="center"
+                        android:textColor="@color/black"
                         android:text="Explore"
                         android:textSize="25sp"
                         android:textStyle="bold"/>
@@ -154,82 +155,225 @@
 
                     <!--saved design-->
                     <LinearLayout
-                        android:id="@+id/lin_item1Explore"
                         android:layout_width="match_parent"
-                        android:layout_height="150dp"
+                        android:layout_height="wrap_content"
                         android:orientation="vertical"
                         android:layout_marginTop="15dp"
                         android:layout_marginBottom="15dp"
                         android:padding="5dp"
                         android:background="@drawable/scrollview_items">
 
-                        <TextView
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="150dp"
+                            android:orientation="vertical"
+                            android:layout_margin="10dp"
+                            android:padding="2dp"
+                            android:background="@drawable/scrollview_items">
+
+                            <ImageView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:src="@drawable/exploredesign1"
+                                android:clipToOutline="true"
+                                android:background="@drawable/library_item"
+                                android:scaleType="fitXY"/>
+
+                        </LinearLayout>
+
+                        <LinearLayout
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
+                            android:orientation="horizontal">
 
-                            android:textSize="25sp"
-                            android:textColor="@color/white"
-                            android:padding="5dp"/>
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="8"
+                                android:text="1034"
+                                android:textSize="15sp"
+                                android:textStyle="bold"
+                                android:textAlignment="textEnd"
+                                android:textColor="@color/black"
+                                android:padding="5dp"/>
+
+                            <Button
+                                android:layout_width="0dp"
+                                android:layout_weight="1"
+                                android:layout_height="30dp"
+                                android:padding="5dp"
+                                android:backgroundTint="@android:color/transparent"
+                                android:foreground="@drawable/like" />
+
+                        </LinearLayout>
 
                     </LinearLayout>
 
                     <!--drafts-->
                     <LinearLayout
-                        android:id="@+id/lin_item2Explore"
                         android:layout_width="match_parent"
-                        android:layout_height="150dp"
+                        android:layout_height="wrap_content"
                         android:orientation="vertical"
                         android:layout_marginTop="15dp"
                         android:layout_marginBottom="15dp"
+                        android:padding="5dp"
                         android:background="@drawable/scrollview_items">
 
-                        <TextView
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="150dp"
+                            android:orientation="vertical"
+                            android:layout_margin="10dp"
+                            android:padding="2dp"
+                            android:background="@drawable/scrollview_items">
+
+                            <ImageView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:src="@drawable/exploredesign2"
+                                android:clipToOutline="true"
+                                android:background="@drawable/library_item"
+                                android:scaleType="fitXY"/>
+
+                        </LinearLayout>
+
+                        <LinearLayout
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
+                            android:orientation="horizontal">
 
-                            android:textSize="25sp"
-                            android:textColor="@color/white"
-                            android:padding="5dp"/>
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="8"
+                                android:text="1346"
+                                android:textSize="15sp"
+                                android:textStyle="bold"
+                                android:textAlignment="textEnd"
+                                android:textColor="@color/black"
+                                android:padding="5dp"/>
 
-                    </LinearLayout>
+                            <Button
+                                android:layout_width="0dp"
+                                android:layout_weight="1"
+                                android:layout_height="30dp"
+                                android:padding="5dp"
+                                android:backgroundTint="@android:color/transparent"
+                                android:foreground="@drawable/like" />
 
-                    <!--library-->
-                    <LinearLayout
-                        android:id="@+id/lin_item3Explore"
-                        android:layout_width="match_parent"
-                        android:layout_height="150dp"
-                        android:orientation="vertical"
-                        android:layout_marginTop="15dp"
-                        android:layout_marginBottom="15dp"
-                        android:background="@drawable/scrollview_items">
-
-                        <TextView
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-
-                            android:textSize="25sp"
-                            android:textColor="@color/white"
-                            android:padding="5dp"/>
+                        </LinearLayout>
 
                     </LinearLayout>
 
                     <!--explore-->
                     <LinearLayout
-                        android:id="@+id/lin_item4Explore"
                         android:layout_width="match_parent"
-                        android:layout_height="150dp"
+                        android:layout_height="wrap_content"
                         android:orientation="vertical"
                         android:layout_marginTop="15dp"
                         android:layout_marginBottom="15dp"
+                        android:padding="5dp"
                         android:background="@drawable/scrollview_items">
 
-                        <TextView
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="150dp"
+                            android:orientation="vertical"
+                            android:layout_margin="10dp"
+                            android:padding="2dp"
+                            android:background="@drawable/scrollview_items">
+
+                            <ImageView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:src="@drawable/exploredesign3"
+                                android:clipToOutline="true"
+                                android:background="@drawable/library_item"
+                                android:scaleType="fitXY"/>
+
+                        </LinearLayout>
+
+                        <LinearLayout
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
+                            android:orientation="horizontal">
 
-                            android:textSize="25sp"
-                            android:textColor="@color/white"
-                            android:padding="5dp"/>
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="8"
+                                android:text="908"
+                                android:textSize="15sp"
+                                android:textStyle="bold"
+                                android:textAlignment="textEnd"
+                                android:textColor="@color/black"
+                                android:padding="5dp"/>
+
+                            <Button
+                                android:layout_width="0dp"
+                                android:layout_weight="1"
+                                android:layout_height="30dp"
+                                android:padding="5dp"
+                                android:backgroundTint="@android:color/transparent"
+                                android:foreground="@drawable/like" />
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_marginTop="15dp"
+                        android:layout_marginBottom="15dp"
+                        android:padding="5dp"
+                        android:background="@drawable/scrollview_items">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="150dp"
+                            android:orientation="vertical"
+                            android:layout_margin="10dp"
+                            android:padding="2dp"
+                            android:background="@drawable/scrollview_items">
+
+                            <ImageView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:src="@drawable/exploredesign4"
+                                android:clipToOutline="true"
+                                android:background="@drawable/library_item"
+                                android:scaleType="fitXY"/>
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="8"
+                                android:text="1127"
+                                android:textSize="15sp"
+                                android:textStyle="bold"
+                                android:textAlignment="textEnd"
+                                android:textColor="@color/black"
+                                android:padding="5dp"/>
+
+                            <Button
+                                android:layout_width="0dp"
+                                android:layout_weight="1"
+                                android:layout_height="30dp"
+                                android:padding="5dp"
+                                android:backgroundTint="@android:color/transparent"
+                                android:foreground="@drawable/like" />
+
+                        </LinearLayout>
 
                     </LinearLayout>
 
