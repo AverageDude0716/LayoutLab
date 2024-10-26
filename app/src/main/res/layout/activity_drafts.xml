@@ -9,263 +9,150 @@
     android:orientation="vertical"
     android:background="@color/white">
 
+    <!-- Top Navigation Bar -->
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical">
+        android:padding="5dp"
+        android:orientation="horizontal">
 
-        <!--top-->
+        <Button
+            android:id="@+id/btn_backDrafts"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="50dp"
+            android:backgroundTint="@android:color/transparent"
+            android:foreground="@drawable/back_icon"
+            android:contentDescription="back" />
+
         <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:padding="5dp">
+            android:layout_width="0dp"
+            android:layout_weight="5"
+            android:gravity="center"
+            android:layout_height="wrap_content">
 
-            <LinearLayout
-                android:layout_width="0dp"
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btn_logoHome"
+                android:layout_width="50dp"
                 android:layout_height="50dp"
-                android:layout_weight="1"
-                android:orientation="horizontal"
-                android:gravity="start">
-
-                <Button
-                    android:id="@+id/btn_backDrafts"
-                    android:layout_width="50dp"
-                    android:layout_height="50dp"
-                    android:backgroundTint="@android:color/transparent"
-                    android:foreground="@drawable/back_icon" />
-
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="0dp"
-                android:layout_height="50dp"
-                android:layout_weight="1"
-                android:orientation="horizontal"
-                android:gravity="center">
-
-                <com.google.android.material.button.MaterialButton
-                    android:id="@+id/btn_logoHome"
-                    android:layout_width="50dp"
-                    android:layout_height="50dp"
-                    android:foreground="@drawable/logo_transparent"
-                    app:backgroundTint="@android:color/transparent"
-                    android:clickable="false"/>
-
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="0dp"
-                android:layout_height="50dp"
-                android:layout_weight="1"
-                android:orientation="horizontal"
-                android:gravity="start">
-
-                <LinearLayout
-                    android:layout_width="0dp"
-                    android:layout_height="50dp"
-                    android:layout_weight="1"
-                    android:orientation="horizontal"
-                    android:gravity="end">
-
-                    <Button
-                        android:id="@+id/btn_profileDrafts"
-                        android:layout_width="50dp"
-                        android:layout_height="50dp"
-                        android:backgroundTint="@android:color/transparent"
-                        android:foreground="@drawable/profile_icon" />
-
-                </LinearLayout>
-
-            </LinearLayout>
+                android:foreground="@drawable/logo_transparent"
+                app:backgroundTint="@android:color/transparent"
+                android:clickable="false"/>
 
         </LinearLayout>
 
-        <ScrollView
-            android:layout_width="match_parent"
-            android:layout_height="0dp"
+        <Button
+            android:id="@+id/btn_profileDrafts"
+            android:layout_width="0dp"
             android:layout_weight="1"
-            android:clipToPadding="false"
-            android:paddingTop="5dp">
+            android:layout_height="50dp"
+            android:backgroundTint="@android:color/transparent"
+            android:foreground="@drawable/profile_icon"
+            android:contentDescription="profile" />
+    </LinearLayout>
 
+    <!-- Main Content -->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:clipToPadding="false"
+        android:paddingTop="5dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingHorizontal="16dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Drafts"
+                android:textSize="25sp"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                android:gravity="center"
+                android:layout_marginBottom="20dp"/>
+
+            <!-- Search Bar -->
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                app:cardCornerRadius="25dp"
+                app:cardElevation="4dp"
+                android:background="@drawable/search"
+                android:backgroundTint="@color/search"
+                android:layout_marginBottom="15dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal"
+                    android:padding="10dp">
+
+                    <ImageView
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:src="@drawable/search_icon" />
+
+                    <EditText
+                        android:id="@+id/etx_searchDrafts"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@null"
+                        android:hint="@string/search"
+                        android:inputType="text"
+                        android:textColorHint="@color/gray"
+                        android:paddingStart="10dp" />
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <!-- Drafts Items -->
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="vertical">
+                android:orientation="vertical"
+                android:gravity="center">
 
-                <LinearLayout
+                <!-- Item Card -->
+                <com.google.android.material.card.MaterialCardView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:orientation="vertical">
+                    app:cardCornerRadius="8dp"
+                    app:cardElevation="2dp"
+                    android:layout_marginBottom="15dp"
+                    android:backgroundTint="@color/scrollviewItemBackground"
+                    android:padding="10dp">
 
-                    <TextView
+                    <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:textAlignment="center"
-                        android:text="Drafts"
-                        android:textSize="25sp"
-                        android:textColor="@color/black"
-                        android:textStyle="bold"/>
-
-                </LinearLayout>
-
-                <!--search-->
-                <com.google.android.material.card.MaterialCardView
-                    android:layout_width="300dp"
-                    android:layout_height="50dp"
-                    android:layout_gravity="center"
-                    app:cardCornerRadius="25dp"
-                    app:cardElevation="4dp"
-                    android:background="@drawable/search"
-                    android:layout_marginBottom="15dp">
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:orientation="horizontal"
-                        android:background="@drawable/search"
-                        android:padding="10dp">
-
-                        <ImageView
-                            android:layout_width="24dp"
-                            android:layout_height="24dp"
-                            android:src="@drawable/search_icon" />
-
-                        <EditText
-                            android:id="@+id/etx_searchDrafts"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:background="@null"
-                            android:hint="@string/search"
-                            android:inputType="text"
-                            android:textColorHint="@color/gray"
-                            android:paddingStart="10dp" />
-                    </LinearLayout>
-                </com.google.android.material.card.MaterialCardView>
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="vertical"
-                    android:gravity="center"
-                    android:paddingLeft="40dp"
-                    android:paddingRight="40dp">
-
-                    <!--saved design-->
-                    <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="vertical"
-                    android:layout_marginTop="15dp"
-                    android:layout_marginBottom="15dp"
-                    android:padding="5dp"
-                    android:background="@drawable/scrollview_items">
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="150dp"
-                        android:orientation="vertical"
-                        android:layout_margin="10dp"
-                        android:padding="2dp"
-                        android:background="@drawable/scrollview_items">
+                        android:orientation="vertical">
 
                         <ImageView
                             android:layout_width="match_parent"
-                            android:layout_height="match_parent"
+                            android:layout_height="120dp"
                             android:src="@drawable/exploredesign5"
                             android:clipToOutline="true"
-                            android:background="@drawable/library_item"
-                            android:scaleType="fitXY"/>
-
-                    </LinearLayout>
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:orientation="horizontal">
+                            android:scaleType="centerCrop"/>
 
                         <TextView
-                            android:layout_width="0dp"
+                            android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:layout_weight="8"
                             android:text="Edit"
                             android:textSize="15sp"
                             android:textStyle="bold"
-                            android:textAlignment="textEnd"
                             android:textColor="@color/black"
-                            android:padding="5dp"/>
-
-
-
+                            android:gravity="end"
+                            android:paddingTop="5dp"
+                            android:paddingRight="10dp"/>
                     </LinearLayout>
+                </com.google.android.material.card.MaterialCardView>
 
-                </LinearLayout>
-
-                    <!--drafts-->
-<!--                    <LinearLayout-->
-<!--                        android:id="@+id/lin_item2Drafts"-->
-<!--                        android:layout_width="match_parent"-->
-<!--                        android:layout_height="150dp"-->
-<!--                        android:orientation="vertical"-->
-<!--                        android:layout_marginTop="15dp"-->
-<!--                        android:layout_marginBottom="15dp"-->
-<!--                        android:background="@drawable/scrollview_items">-->
-
-<!--                        <TextView-->
-<!--                            android:layout_width="match_parent"-->
-<!--                            android:layout_height="wrap_content"-->
-
-<!--                            android:textSize="25sp"-->
-<!--                            android:textColor="@color/white"-->
-<!--                            android:padding="5dp"/>-->
-
-<!--                    </LinearLayout>-->
-
-                    <!--library-->
-<!--                    <LinearLayout-->
-<!--                        android:id="@+id/lin_item3Drafts"-->
-<!--                        android:layout_width="match_parent"-->
-<!--                        android:layout_height="150dp"-->
-<!--                        android:orientation="vertical"-->
-<!--                        android:layout_marginTop="15dp"-->
-<!--                        android:layout_marginBottom="15dp"-->
-<!--                        android:background="@drawable/scrollview_items">-->
-
-<!--                        <TextView-->
-<!--                            android:layout_width="match_parent"-->
-<!--                            android:layout_height="wrap_content"-->
-
-<!--                            android:textSize="25sp"-->
-<!--                            android:textColor="@color/white"-->
-<!--                            android:padding="5dp"/>-->
-
-<!--                    </LinearLayout>-->
-
-                    <!--explore-->
-<!--                    <LinearLayout-->
-<!--                        android:id="@+id/lin_item4Drats"-->
-<!--                        android:layout_width="match_parent"-->
-<!--                        android:layout_height="150dp"-->
-<!--                        android:orientation="vertical"-->
-<!--                        android:layout_marginTop="15dp"-->
-<!--                        android:layout_marginBottom="15dp"-->
-<!--                        android:background="@drawable/scrollview_items">-->
-
-<!--                        <TextView-->
-<!--                            android:layout_width="match_parent"-->
-<!--                            android:layout_height="wrap_content"-->
-
-<!--                            android:textSize="25sp"-->
-<!--                            android:textColor="@color/white"-->
-<!--                            android:padding="5dp"/>-->
-
-<!--                    </LinearLayout>-->
-
-                </LinearLayout>
+                <!-- Repeat the above item card as necessary -->
 
             </LinearLayout>
-
-        </ScrollView>
-
-    </LinearLayout>
-
+        </LinearLayout>
+    </ScrollView>
 </LinearLayout>

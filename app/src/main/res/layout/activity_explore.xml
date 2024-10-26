@@ -114,6 +114,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="15dp"
                 android:layout_marginBottom="15dp"
+                android:backgroundTint="@color/scrollviewItemBackground"
                 app:cardElevation="4dp">
 
                 <LinearLayout
@@ -161,7 +162,8 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="15dp"
                 android:layout_marginBottom="15dp"
-                app:cardElevation="4dp">
+                app:cardElevation="4dp"
+                android:backgroundTint="@color/scrollviewItemBackground">
 
                 <LinearLayout
                     android:layout_width="match_parent"

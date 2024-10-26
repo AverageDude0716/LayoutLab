@@ -7,4 +7,5 @@
     <color name="gray2">#d2d2d2</color>
     <color name="gray">#BABABA</color>
     <color name="scrollviewItemBackground">#90B541</color>
+    <color name="search">#EFECEC</color>
 </resources>
