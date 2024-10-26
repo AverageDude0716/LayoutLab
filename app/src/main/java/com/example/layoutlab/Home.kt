@@ -8,16 +8,17 @@ import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
+import com.google.android.material.card.MaterialCardView
 import com.google.android.material.floatingactionbutton.FloatingActionButton
 
 class Home : AppCompatActivity() {
 
     lateinit var btn_settingsHome: Button
     lateinit var btn_profileHome: Button
-    lateinit var lin_savedDesigns: LinearLayout
-    lateinit var lin_drafts: LinearLayout
-    lateinit var lin_library: LinearLayout
-    lateinit var lin_explore: LinearLayout
+    lateinit var mcv_savedDesigns: MaterialCardView
+    lateinit var mcv_drafts: MaterialCardView
+    lateinit var mcv_library: MaterialCardView
+    lateinit var mcv_explore: MaterialCardView
     lateinit var fab_addHome: FloatingActionButton
 
 
@@ -28,10 +29,10 @@ class Home : AppCompatActivity() {
 
         btn_settingsHome = findViewById(R.id.btn_settingsHome)
         btn_profileHome = findViewById(R.id.btn_profileHome)
-        lin_savedDesigns = findViewById(R.id.lin_savedDesigns)
-        lin_drafts = findViewById(R.id.lin_drafts)
-        lin_library = findViewById(R.id.lin_library)
-        lin_explore = findViewById(R.id.lin_explore)
+        mcv_savedDesigns = findViewById(R.id.lin_savedDesigns)
+        mcv_drafts = findViewById(R.id.lin_drafts)
+        mcv_library = findViewById(R.id.lin_library)
+        mcv_explore = findViewById(R.id.lin_explore)
         fab_addHome = findViewById(R.id.fab_addHome)
 
         btn_settingsHome.setOnClickListener {
@@ -46,25 +47,25 @@ class Home : AppCompatActivity() {
             finish()
         }
 
-        lin_savedDesigns.setOnClickListener {
+        mcv_savedDesigns.setOnClickListener {
             val intent = Intent(this@Home, savedDesign::class.java)
             startActivity(intent)
             finish()
         }
 
-        lin_drafts.setOnClickListener{
+        mcv_drafts.setOnClickListener{
             val intent = Intent(this@Home, drafts::class.java)
             startActivity(intent)
             finish()
         }
 
-        lin_library.setOnClickListener{
+        mcv_library.setOnClickListener{
             val intent = Intent(this@Home, library::class.java)
             startActivity(intent)
             finish()
         }
 
-        lin_explore.setOnClickListener {
+        mcv_explore.setOnClickListener {
             val intent = Intent(this@Home, explore::class.java)
             startActivity(intent)
             finish()
